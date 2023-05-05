@@ -1,0 +1,32 @@
+{% extends 'main/basic.html' %}
+{%load static%}
+
+
+{%block title%} <title>генератор паролів</title>
+{%endblock%}
+
+{%block content%}
+  <div id="central ">
+    <div class="content">
+      <div class="leftside">
+
+        <div class="line"></div>
+
+        <form action="" method="post" novalidate>
+            {% csrf_token %}
+            <table>
+                {{form.as_table}}
+            </table>
+            <input class=" " type="submit" value="Відправити повідомлення"/>
+        </form>
+
+        {%if good_ansver %}
+          <h4> Повідомлення відправлене </h4>
+        {%endif%}
+
+<div class="line"></div>
+
+      </div>
+    </div>
+  </div>
+{%endblock%}

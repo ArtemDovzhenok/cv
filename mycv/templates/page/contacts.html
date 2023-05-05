@@ -1,0 +1,49 @@
+{% extends 'main/basic.html' %}
+{%load static%}
+
+
+{%block title%} <title>Контакти</title>
+{%endblock%}
+
+{%block content%}
+  <div id="central ">
+    <div class="content">
+      <div class="leftside">
+        <div class="line"></div>
+          <h3>Відгуки та пропозіції</h3>
+        {%if feedbackoutput%}
+            {%for f in feedbackoutput%}
+        <div>
+            <p><b>{{f.author}}</b> : {{f.content}}</p>
+        </div>
+            {%endfor%}
+        {%endif%}
+        </div>
+          <hr>
+        <div class="leftside">
+              {%if messages%}
+              {%for message in messages%}
+               <div class="line"></div>
+                    <h4> {{message}} </h4>
+              {%endfor%}
+              {%endif%}
+
+          <form action="" method="post" novalidate>
+            {% csrf_token %}
+            <p class="form_as_p">Ваше ПІБ</p>
+            {{ form.author}}
+            <p class="form_as_p">E-mail</p>
+            {{ form.email}}
+            <p class="form_as_p">Залиште своє повідомлення тут</p>
+            {{ form.content}}
+            <p>{{form.mycaptcha}}</p>
+            <input class=" " type="submit" value="Залишити коментар"/>
+          </form>
+
+        </div>
+        <div class="line"></div>
+    </div>
+  </div>
+
+
+{%endblock%}

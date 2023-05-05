@@ -1,1 +1,56 @@
-1
+{% extends 'main/basic.html' %}
+{%load static%}
+
+
+{%block title%} <title>CV-Artem Dovzhenok</title>
+{%endblock%}
+
+{%block content%}
+
+				<div id="central ">
+						<div class="content">
+							<p><img class="imgclass" src="{% static 'img/selffoto.jpg'%}" alt="Artem Dovzhenok" /></p>
+							<h1> Довженок Артем </h1>
+
+							<div>
+								<article>
+									<section class="contactinfo">
+										<p>
+											Contact: 093-798-45-26 <br>
+											Address: 56 Levka Luk`ianenka St<br>
+											CHERNIHIV UKRAINE<br>
+											Email: amdovzhenok@gmail.com<br>
+										</p>
+									</section>
+									<section class ="contactdetails">
+										<p>
+											Personnal details:<br>
+											Born: 18 July 1986   Age: 36<br>
+											Mother language: Ukraine<br>
+											Situation: married			<br>
+										</p>
+									</section>
+								</article>
+							</div>
+							<div id="summary">
+							<hr>
+								<h4>CAREER OBJECTIVE:</h4>
+									<p>I am eager to achieve a good position in the company to scale up the organization’s production and growth rate and at the same time for my personal career growth as well.</p>
+
+									<h4>WORK EXPERIENCE:</h4>
+									<p>04.2008-04.2017: computer systems engineer in Chernihiv’s branch of Ukrtelecom</p>
+
+									<p>now: freelance</p>
+
+									<h4>EDUCATION: </h4>
+									<p>2003-2007 Chernignivsky State Technological University, Faculty - FEIT, qualification directly "Computer systems and services"</p>
+
+									<h4>SKILLS: CSS, HTML, JS, python, mySgl</h4>
+							<hr>
+							</div>
+
+						</div>
+
+				</div>
+
+{%endblock%}

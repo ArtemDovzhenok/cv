@@ -1,0 +1,29 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+{%block title%} {%endblock%}
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css" media="screen">
+	    <link rel="stylesheet" href="{% static 'css/clock.css' %}" type="text/css" media="screen">
+		<script src="js/jquery-1.6.3.min.js" type="text/javascript"></script>
+
+</head>
+	<body id="page1">
+		<div class="ccontent">
+			<div class="main">
+
+				{%include 'main/header.html'%}
+
+				{%block content%}
+				{%endblock%}
+			</div>
+
+			<footer>
+				{%include 'main/footer.html'%}
+			</footer>
+		</div>
+
+	</body>
+</html>

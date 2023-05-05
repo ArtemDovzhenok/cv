@@ -1,0 +1,14 @@
+{% load static %}
+{%block header%}
+				<header>
+
+						<nav>
+							<ul class="menu">
+								<li><a class="active" href="{% url 'index' %}">Резюме</a></li>
+								<li><a href="{% url 'createpassword' %}">Генератор паролів</a></li>
+								<li><a href="{% url 'feedback' %}">Ваші відгуки</a></li>
+								<li class="last"><a href="{% url 'contacts' %}">Наші контакти</a></li>
+							</ul>
+						</nav>
+				</header>
+{%endblock%}
